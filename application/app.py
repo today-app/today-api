@@ -22,6 +22,8 @@ db.Model = declarative_base()
 
 login_manager = LoginManager()
 login_manager.init_app(app)
+login_manager.login_view = 'login'
+login_manager.login_message = 'Please log in to see your appointments.'
 
 logger = logging.getLogger('flask_oauthlib')
 logger2 = logging.getLogger('oauthlib')
@@ -351,6 +353,7 @@ def get_user(username, password, *args, **kwargs):
 @oauth.authorize_handler
 def authorize(*args, **kwargs):
     app.logger.debug('authorize')
+    app.logger.debug(request)
     if request.method == 'GET':
         client_id = kwargs.get('client_id')
         #client = Client.query.filter_by(client_id=client_id).first()
@@ -402,7 +405,8 @@ def login():
         user, authenticated = User.authenticate(db.session.query, email, password)
         if authenticated:
             login_user(user)
-            return redirect(url_for('authorize'))
+            # return redirect(url_for('authorize'))
+            return redirect(request.args.get("next") or url_for("authorize"))
         else:
             error = 'Incorrect username or password. Try again.'
     return render_template('user/login.html', form=form, error=error)
