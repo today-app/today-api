@@ -1,25 +1,15 @@
+<<<<<<< HEAD
+=======
 # Byte-compiled / optimized / DLL files
 __pycache__/
+>>>>>>> 911388dee6fe1af425a4e5c43382df2a09501918
 *.py[cod]
 
 # C extensions
 *.so
 
-# Distribution / packaging
-.Python
-env/
-bin/
-build/
-develop-eggs/
-dist/
-eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
+<<<<<<< HEAD
+# Packages
 *.egg
 *.egg-info
 dist
@@ -37,6 +27,31 @@ __pycache__
 
 # Installer logs
 pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+=======
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
@@ -46,6 +61,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
+>>>>>>> 911388dee6fe1af425a4e5c43382df2a09501918
 
 # Translations
 *.mo
@@ -55,13 +71,20 @@ coverage.xml
 .project
 .pydevproject
 
+<<<<<<< HEAD
 #
 .idea
-
 sched.db
+*.log
+=======
+# Rope
+.ropeproject
+
+# Django stuff:
 *.log
 *.pot
 
 # Sphinx documentation
 docs/_build/
 
+>>>>>>> 911388dee6fe1af425a4e5c43382df2a09501918

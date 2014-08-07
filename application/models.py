@@ -197,7 +197,8 @@ class User(Base):
 if __name__ == '__main__':
     from sqlalchemy import create_engine
 
-    engine = create_engine('sqlite:///sched.db', echo=True)
+    # engine = create_engine('sqlite:///sched.db', echo=True)
+    engine = create_engine('mysql://user:secret@localhost/today_web', echo=True)
 
     Base.metadata.create_all(engine)
 

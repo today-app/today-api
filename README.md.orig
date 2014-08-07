@@ -1,5 +1,6 @@
-today-api
-=========
+<<<<<<< HEAD
+flask-oauthprovider-example
+===========================
 
 Flask OAuth2 Provider 
 
@@ -19,3 +20,7 @@ SQLite DB 생성
 
     cd [root]
     python manage.py runserver
+=======
+today-api
+=========
+>>>>>>> 911388dee6fe1af425a4e5c43382df2a09501918
